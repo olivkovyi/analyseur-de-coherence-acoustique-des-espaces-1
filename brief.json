@@ -1,0 +1,269 @@
+{
+  "run_id": "run-1776036389415",
+  "job_index": 1,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 1,
+    "archetype": "tool",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Un outil pour architex, acousticiens et particuliers souhaitant améliorer le confort sonore de leurs espaces.",
+    "notes": "Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.\nSe concentre sur les mesures objectives (RT60, absorption, diffusion) et propose des solutions simples.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "tool",
+    "archetype_mix": [
+      "tool"
+    ],
+    "forced_design_theme": "signal-noir",
+    "forced_structure_preset": "metric-grid",
+    "site_idea_title": "Analyseur de Cohérence Acoustique des Espaces",
+    "site_idea_summary": "Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.",
+    "forced_slug": "analyseur-de-coherence-acoustique-des-espaces-1"
+  },
+  "site_spec": {
+    "slug": "analyseur-de-coherence-acoustique-des-espaces-1",
+    "theme": {
+      "name": "Signal Noir",
+      "slug": "signal-noir",
+      "eyebrow": "Performance Pipeline",
+      "family": "performance-dark",
+      "moods": [
+        "performance",
+        "technical",
+        "premium",
+        "dark"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator",
+        "generator"
+      ],
+      "niches": [
+        "analytics",
+        "insurance",
+        "finance",
+        "developer",
+        "qa"
+      ],
+      "keywords": [
+        "efficiency",
+        "dashboard",
+        "metrics",
+        "conversion"
+      ],
+      "token_index": [
+        "analytics",
+        "calculator",
+        "conversion",
+        "dark",
+        "dashboard",
+        "developer",
+        "efficiency",
+        "finance",
+        "generator",
+        "insurance",
+        "metrics",
+        "noir",
+        "performance",
+        "pipeline",
+        "premium",
+        "signal",
+        "technical",
+        "tool"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap",
+      "display_font": "\"Fraunces\", serif",
+      "body_font": "\"Space Grotesk\", sans-serif",
+      "layout": "split",
+      "card_style": "glass",
+      "button_style": "glow",
+      "decor_style": "grid",
+      "hero_template": "1.08fr 0.92fr",
+      "seo_template": "1.18fr 0.82fr",
+      "feature_columns": 3,
+      "faq_columns": 3,
+      "hero_min_height": "78vh",
+      "panel_radius": "30px",
+      "card_radius": "24px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "18px",
+      "palette": {
+        "bg": "#0c0e11",
+        "surface": "rgba(18, 22, 28, 0.86)",
+        "surface_border": "rgba(255, 255, 255, 0.08)",
+        "text": "#f7f1e8",
+        "muted": "#b0aba2",
+        "accent": "#e0ff4f",
+        "accent_alt": "#2dd4bf",
+        "hero_glow": "rgba(224, 255, 79, 0.18)",
+        "button_text": "#0d1006",
+        "panel_alt": "rgba(255, 255, 255, 0.04)",
+        "shadow": "0 28px 84px rgba(0, 0, 0, 0.34)",
+        "input_fill": "rgba(255, 255, 255, 0.04)"
+      }
+    },
+    "structure": {
+      "name": "Metric Grid",
+      "slug": "metric-grid",
+      "hero_variant": "command",
+      "proof_variant": "metrics",
+      "section_order": [
+        "features",
+        "seo",
+        "proof",
+        "faq"
+      ],
+      "feature_columns": 4,
+      "faq_columns": 2,
+      "family": "data-grid",
+      "moods": [
+        "technical",
+        "precise",
+        "systemic"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator"
+      ],
+      "niches": [
+        "developer tools",
+        "qa",
+        "finance",
+        "analytics"
+      ],
+      "keywords": [
+        "metrics",
+        "grid",
+        "dashboard",
+        "precision"
+      ],
+      "token_index": [
+        "analytics",
+        "calculator",
+        "command",
+        "dashboard",
+        "data",
+        "developer",
+        "faq",
+        "features",
+        "finance",
+        "grid",
+        "metric",
+        "metrics",
+        "precise",
+        "precision",
+        "proof",
+        "seo",
+        "systemic",
+        "technical",
+        "tool",
+        "tools"
+      ]
+    },
+    "render_direction": "atlas-report",
+    "render_direction_name": "Atlas Report",
+    "page_blueprint": "briefing-board",
+    "page_blueprint_name": "Briefing Board",
+    "title": "Analyseur de Cohérence Acoustique des Espaces",
+    "tagline": "Votre Analyse Acoustique Personnalisée",
+    "description": "Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.",
+    "feature_prefix": "Bloc",
+    "action": "Utiliser l'outil",
+    "cta_primary": "Obtenir des conseils avancés",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "primary",
+        "label": "Texte ou besoin",
+        "type": "text",
+        "placeholder": "Votre besoin principal",
+        "weight": 1.0
+      },
+      {
+        "id": "context",
+        "label": "Contexte",
+        "type": "text",
+        "placeholder": "Situation ou objectif",
+        "weight": 1.0
+      },
+      {
+        "id": "scope",
+        "label": "Intensité",
+        "type": "number",
+        "placeholder": "3",
+        "weight": 0.3
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Atlas Report",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Résultat recommandé",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Atlas Report",
+      "Obtenir des conseils avancés",
+      "Résultat recommandé",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Résultat recommandé",
+    "result_unit": "",
+    "runtime_mode": "analysis_tool",
+    "page_variant": "console",
+    "faq_topic": "Analyseur de Cohérence Acoustique des Espaces",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Analyseur de Cohérence Acoustique des Espaces ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Analyseur de Cohérence Acoustique des Espaces et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Analyseur de Cohérence Acoustique des Espaces | Votre Analyse Acoustique Personnalisée</title>\n    <meta name=\"description\" content=\"Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.\">\n    <style>\n        :root {\n            --dark-bg: #1a1a1a;\n            --mid-dark: #2a2a2a;\n            --light-text: #e0e0e0;\n            --accent-color: #00bcd4; /* Cyan bright */\n            --border-color: #3a3a3a;\n            --font-serif: 'Georgia', serif;\n            --font-sans: 'Arial', sans-serif;\n            --spacing-unit: 20px;\n        }\n\n        body {\n            font-family: var(--font-sans);\n            background-color: var(--dark-bg);\n            color: var(--light-text);\n            margin: 0;\n            padding: 0;\n            line-height: 1.6;\n            display: flex;\n            flex-direction: column;\n            min-height: 100vh;\n        }\n\n        header {\n            background-color: var(--mid-dark);\n            padding: var(--spacing-unit);\n            border-bottom: 1px solid var(--border-color);\n            text-align: center;\n        }\n\n        h1 {\n            font-family: var(--font-serif);\n            font-size: 2.8em;\n            color: var(--accent-color);\n            margin: 0;\n            letter-spacing: -0.05em;\n            line-height: 1.1;\n        }\n\n        h2 {\n            font-family: var(--font-serif);\n            font-size: 2em;\n            color: var(--light-text);\n            margin-bottom: var(--spacing-unit);\n            border-bottom: 1px solid var(--border-color);\n            padding-bottom: 10px;\n            text-align: center;\n        }\n\n        h3 {\n            font-family: var(--font-serif);\n            font-size: 1.5em;\n            color: var(--accent-color);\n            margin-top: 0;\n        }\n\n        main {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n            gap: var(--spacing-unit);\n            padding: var(--spacing-unit);\n            max-width: 1200px;\n            margin: var(--spacing-unit) auto;\n            flex-grow: 1;\n        }\n\n        section {\n            background-color: var(--mid-dark);\n            padding: var(--spacing-unit);\n            border: 1px solid var(--border-color);\n            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);\n        }\n\n        .hero-summary {\n            grid-column: 1 / -1;\n            text-align: center;\n            font-size: 1.2em;\n            padding: var(--spacing-unit) 0;\n            color: var(--light-text);\n        }\n\n        label {\n            display: block;\n            margin-bottom: 8px;\n            font-weight: bold;\n            color: var(--accent-color);\n        }\n\n        input[type=\"number\"], select {\n            width: calc(100% - 20px);\n            padding: 10px;\n            margin-bottom: 15px;\n            background-color: #333;\n            border: 1px solid var(--border-color);\n            color: var(--light-text);\n            font-size: 1em;\n            -webkit-appearance: none;\n            -moz-appearance: none;\n            appearance: none;\n        }\n\n        input[type=\"submit\"] {\n            background-color: var(--accent-color);\n            color: var(--dark-bg);\n            padding: 12px 25px;\n            border: none;\n            cursor: pointer;\n            font-size: 1.1em;\n            font-weight: bold;\n            transition: background-color 0.3s ease;\n            width: 100%;\n        }\n\n        input[type=\"submit\"]:hover {\n            background-color: #00a0b8;\n        }\n\n        #tool-result {\n            margin-top: var(--spacing-unit);\n            padding: var(--spacing-unit);\n            background-color: #111;\n            border: 1px solid var(--border-color);\n            white-space: pre-wrap;\n            font-family: 'Consolas', monospace;\n            font-size: 1em;\n            color: #b0e0e6; /* Pale cyan */\n            min-height: 100px;\n            overflow-x: auto;\n        }\n\n        .recommendations ul {\n            list-style: none;\n            padding: 0;\n        }\n\n        .recommendations li {\n            background-color: #333;\n            margin-bottom: 10px;\n            padding: 10px;\n            border-left: 3px solid var(--accent-color);\n        }\n\n        .seo-section {\n            grid-column: 1 / -1;\n            padding: var(--spacing-unit);\n            background-color: #111;\n            border-top: 1px solid var(--border-color);\n            font-size: 0.9em;\n            color: #aaa;\n            text-align: center;\n        }\n\n        .seo-section h2 {\n            color: var(--accent-color);\n            margin-top: 0;\n            margin-bottom: 15px;\n            border-bottom: none;\n            text-align: center;\n        }\n\n        .seo-section p {\n            margin-bottom: 10px;\n            line-height: 1.5;\n        }\n\n        .cta-button {\n            display: inline-block;\n            background-color: #555;\n            color: var(--light-text);\n            padding: 10px 20px;\n            text-decoration: none;\n            border: 1px solid var(--border-color);\n            margin-top: 15px;\n            transition: background-color 0.3s ease;\n            font-size: 0.95em;\n        }\n\n        .cta-button:hover {\n            background-color: #666;\n        }\n\n        footer {\n            background-color: var(--dark-bg);\n            color: #888;\n            text-align: center;\n            padding: var(--spacing-unit);\n            font-size: 0.8em;\n            border-top: 1px solid var(--border-color);\n            margin-top: var(--spacing-unit);\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://analyseur-de-coherence-acoustique-des-espaces-1.onrender.com\">\n    <meta property=\"og:title\" content=\"Analyseur de Cohérence Acoustique des Espaces\">\n    <meta property=\"og:description\" content=\"Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.\">\n    <meta property=\"og:url\" content=\"https://analyseur-de-coherence-acoustique-des-espaces-1.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Analyseur de Cohérence Acoustique des Espaces\", \"description\": \"Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.\", \"url\": \"https://analyseur-de-coherence-acoustique-des-espaces-1.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"analyseur-de-coherence-acoustique-des-espaces-1\" data-runtime-mode=\"analysis_tool\">\n    <header>\n        <h1>Analyseur de Cohérence Acoustique des Espaces</h1>\n        <p class=\"hero-summary\">Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.</p>\n    </header>\n\n    <main>\n        <section style=\"grid-column: span 2;\">\n            <h2>Votre Analyse Acoustique Personnalisée</h2>\n            <form id=\"tool-form\">\n                <label for=\"longueur\">Longueur de la pièce (m) :</label>\n                <input type=\"number\" id=\"longueur\" name=\"longueur\" min=\"1\" step=\"0.1\" required value=\"5\">\n\n                <label for=\"largeur\">Largeur de la pièce (m) :</label>\n                <input type=\"number\" id=\"largeur\" name=\"largeur\" min=\"1\" step=\"0.1\" required value=\"4\">\n\n                <label for=\"hauteur\">Hauteur de la pièce (m) :</label>\n                <input type=\"number\" id=\"hauteur\" name=\"hauteur\" min=\"1\" step=\"0.1\" required value=\"2.5\">\n\n                <label for=\"type_piece\">Type de pièce :</label>\n                <select id=\"type_piece\" name=\"type_piece\">\n                    <option value=\"bureau\">Bureau</option>\n                    <option value=\"studio\">Studio d'enregistrement</option>\n                    <option value=\"salle_concert\">Salle de concert</option>\n                    <option value=\"salon\">Salon / Pièce de vie</option>\n                    <option value=\"salle_reunion\">Salle de réunion</option>\n                </select>\n\n                <label for=\"materiaux_sol\">Matériau du sol :</label>\n                <select id=\"materiaux_sol\" name=\"materiaux_sol\">\n                    <option value=\"beton\">Béton/Carrelage</option>\n                    <option value=\"bois\">Parquet bois</option>\n                    <option value=\"moquette\">Moquette épaisse</option>\n                </select>\n\n                <label for=\"materiaux_murs\">Matériaux des murs (majoritaire) :</label>\n                <select id=\"materiaux_murs\" name=\"materiaux_murs\">\n                    <option value=\"platre\">Plâtre peint</option>\n                    <option value=\"beton\">Béton brut</option>\n                    <option value=\"brique\">Brique</option>\n                    <option value=\"panneaux_acoustiques\">Panneaux acoustiques</option>\n                </select>\n\n                <input type=\"submit\" id=\"tool-submit\" value=\"Analyser la pièce\">\n            </form>\n        </section>\n\n        <section style=\"grid-column: span 2;\">\n            <h2>Résultat de l'Analyse Acoustique</h2>\n            <div id=\"tool-result\">\n                Les résultats de votre analyse apparaîtront ici après avoir soumis le formulaire.\n            </div>\n            <div class=\"recommendations\">\n                <h3>Nos Premières Recommandations</h3>\n                <ul id=\"recommendation-list\">\n                    <li>Utilisez des tapis épais pour absorber le son.</li>\n                    <li>Ajoutez des rideaux lourds aux fenêtres.</li>\n                    <li>Considérez l'intégration de bibliothèques remplies de livres.</li>\n                </ul>\n                <a href=\"#\" class=\"cta-button\" data-affiliate-slot=\"further-advice\">Obtenir des conseils avancés</a>\n            </div>\n        </section>\n\n        <section>\n            <h2>Comprendre l'Acoustique</h2>\n            <p>L'acoustique d'une pièce est cruciale pour le confort et l'efficacité sonore. Des facteurs comme le temps de réverbération (RT60), l'absorption et la diffusion du son jouent un rôle majeur.</p>\n            <p>Un environnement sonore mal géré peut entraîner de la fatigue, un manque de clarté dans la parole ou la musique, et même des problèmes de santé.</p>\n            <a href=\"#\" class=\"cta-button\" data-affiliate-slot=\"learn-more-acoustics\">Approfondir le sujet</a>\n        </section>\n\n        <section>\n            <h2>Pourquoi nous faire confiance ?</h2>\n            <p>Notre outil est basé sur des modèles physiques simplifiés, mais efficaces, pour estimer les paramètres acoustiques clés. Développé par des experts en acoustique et ingénierie sonore, il offre une première approche fiable pour vos projets.</p>\n            <p>Des architectes, acousticiens et passionnés l'utilisent pour poser les bases d'un espace sonore optimal.</p>\n        </section>\n    </main>\n\n    <section class=\"seo-section\">\n        <h2>Optimiser le Confort Sonore de votre Espace : Guide Complet</h2>\n        <p>Améliorer l'acoustique d'une pièce est essentiel pour le bien-être et la productivité. Que vous cherchiez à réduire la réverbération dans un bureau, à obtenir un son clair dans un studio d'enregistrement, ou à optimiser l'ambiance sonore d'une salle de concert, comprendre les bases de l'acoustique est la première étape.</p>\n        <p>Notre <span style=\"color:var(--accent-color);\">outil d'analyse acoustique en ligne</span> vous permet d'évaluer rapidement le temps de réverbération (RT60) de vos espaces. Le RT60 est un indicateur clé de la qualité acoustique, mesurant le temps nécessaire à une onde sonore pour décroître de 60 dB. Un RT60 trop long peut rendre une pièce \"bruyante\" ou \"réverbérante\", tandis qu'un RT60 trop court peut la rendre \"sèche\".</p>\n        <p>Nous vous aidons à identifier les matériaux absorbants et diffusants les plus adaptés : panneaux acoustiques, rideaux, tapis, mobilier. Obtenez des recommandations concrètes pour le <span style=\"color:var(--accent-color);\">traitement acoustique d'un salon</span>, l'isolation sonore d'une chambre, ou la correction acoustique d'une salle de réunion. Que ce soit pour une installation professionnelle ou un aménagement domestique, optimisez votre environnement sonore dès aujourd'hui.</p>\n    </section>\n\n    <footer>\n        © 2024 Analyseur de Cohérence Acoustique. Tous droits réservés.\n    </footer>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(event) {\n            event.preventDefault();\n\n            const longueur = parseFloat(document.getElementById('longueur').value);\n            const largeur = parseFloat(document.getElementById('largeur').value);\n            const hauteur = parseFloat(document.getElementById('hauteur').value);\n            const typePiece = document.getElementById('type_piece').value;\n            const materiauxSol = document.getElementById('materiaux_sol').value;\n            const materiauxMurs = document.getElementById('materiaux_murs').value;\n\n            const volume = longueur * largeur * hauteur;\n            const surfaceMurs = 2 * (longueur * hauteur + largeur * hauteur);\n            const surfaceSolPlafond = 2 * (longueur * largeur);\n            const surfaceTotale = surfaceMurs + surfaceSolPlafond;\n\n            let coeffAbsorptionMoyen = 0;\n            let rt60Ideal = 0;\n\n            // Coefficients d'absorption moyens (approximatifs, à 500Hz)\n            const absorptionCoeffs = {\n                // Sol\n                beton_sol: 0.02,\n                bois_sol: 0.1,\n                moquette_sol: 0.4,\n                // Murs\n                platre_mur: 0.05,\n                beton_mur: 0.02,\n                brique_mur: 0.03,\n                panneaux_acoustiques_mur: 0.7,\n                // Plafond (on suppose plâtre pour simplicité si pas de choix spécifique)\n                platre_plafond: 0.05,\n            };\n\n            // Coeffs d'absorption en fonction des matériaux\n            let absorptionSol = absorptionCoeffs[`${materiauxSol}_sol`];\n            let absorptionMurs = absorptionCoeffs[`${materiauxMurs}_mur`];\n            let absorptionPlafond = absorptionCoeffs.platre_plafond; // Simplification\n\n            // Surface d'absorption équivalente (A) en m² Sabine\n            const A = (longueur * largeur * absorptionSol) +\n                      (longueur * largeur * absorptionPlafond) +\n                      (2 * longueur * hauteur * absorptionMurs) +\n                      (2 * largeur * hauteur * absorptionMurs);\n\n            // Formule de Sabine pour le RT60 (approximative)\n            // RT60 = 0.161 * V / A\n            let rt60 = 0;\n            if (A > 0) {\n                rt60 = (0.161 * volume) / A;\n            } else {\n                rt60 = Infinity; // Cas d'une pièce anéchoïque ou surface d'absorption nulle, très improbable.\n            }\n\n            // RT60 idéal selon le type de pièce (valeurs indicatives en secondes)\n            switch (typePiece) {\n                case 'bureau': rt60Ideal = 0.5; break;\n                case 'studio': rt60Ideal = 0.3; break;\n                case 'salle_concert': rt60Ideal = 1.5; break; // Grande salle, ça varie énormément\n                case 'salon': rt60Ideal = 0.6; break;\n                case 'salle_reunion': rt60Ideal = 0.7; break;\n                default: rt60Ideal = 0.6;\n            }\n\n            let diagnostic = \"\";\n            let recommendations = [];\n\n            if (rt60 < rt60Ideal * 0.8) {\n                diagnostic = \"La pièce est probablement trop 'sèche' ou 'mate'. Le son peut sembler étouffé, et l'ambiance peu vivante.\";\n                recommendations.push(\"Ajoutez des surfaces réfléchissantes : cadres avec vitre, miroirs.\",\n                                     \"Utilisez du mobilier plus dur (bois laqué, métal).\",\n                                     \"Réduisez la quantité de matériaux absorbants si possible.\");\n            } else if (rt60 > rt60Ideal * 1.2) {\n                diagnostic = \"La pièce est probablement trop 'réverbérante'. Le son peut être confus, et la parole difficile à comprendre.\";\n                recommendations.push(\"Intégrez des panneaux acoustiques absorbants sur les murs ou le plafond.\",\n                                     \"Ajoutez des tapis épais et des rideaux lourds.\",\n                                     \"Utilisez des meubles rembourrés (canapés, fauteuils).\",\n                                     \"Placez des diffuseurs acoustiques pour disperser le son si l'espace le permet.\");\n            } else {\n                diagnostic = \"L'acoustique de la pièce semble équilibrée pour son usage prévu.\";\n                recommendations.push(\"Maintenez l'équilibre actuel. Considérez l'ajout de quelques éléments diffusants pour une meilleure spatialisation du son si pertinent.\");\n            }\n\n            const resultDiv = document.getElementById('tool-result');\n            resultDiv.innerHTML = `\n                <h3>Résultats pour votre espace</h3>\n                <p><strong>Dimensions :</strong> ${longueur}m x ${largeur}m x ${hauteur}m</p>\n                <p><strong>Volume de la pièce :</strong> ${volume.toFixed(2)} m³</p>\n                <p><strong>RT60 estimé :</strong> ${rt60.toFixed(2)} secondes</p>\n                <p><strong>RT60 idéal pour un(e) ${typePiece} :</strong> ${rt60Ideal.toFixed(2)} secondes</p>\n                <p><strong>Diagnostic :</strong> ${diagnostic}</p>\n            `;\n\n            const recommendationList = document.getElementById('recommendation-list');\n            recommendationList.innerHTML = '';\n            recommendations.forEach(rec => {\n                const li = document.createElement('li');\n                li.textContent = rec;\n                recommendationList.appendChild(li);\n            });\n        });\n\n        // Initial analysis on page load with default values\n        document.addEventListener('DOMContentLoaded', () => {\n            document.getElementById('tool-submit').click();\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.setAttribute(\"rel\", \"nofollow sponsored noopener noreferrer\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\", \"noopener\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    if (tag === \"select\") {\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      field.value = sampleNumber(field);\n      return;\n    }\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
