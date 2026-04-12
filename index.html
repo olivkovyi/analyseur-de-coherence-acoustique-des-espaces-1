@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur de Cohérence Acoustique des Espaces | Votre Analyse Acoustique Personnalisée</title>
+    <meta name="description" content="Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.">
+    <style>
+        :root {
+            --dark-bg: #1a1a1a;
+            --mid-dark: #2a2a2a;
+            --light-text: #e0e0e0;
+            --accent-color: #00bcd4; /* Cyan bright */
+            --border-color: #3a3a3a;
+            --font-serif: 'Georgia', serif;
+            --font-sans: 'Arial', sans-serif;
+            --spacing-unit: 20px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--mid-dark);
+            padding: var(--spacing-unit);
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 2.8em;
+            color: var(--accent-color);
+            margin: 0;
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 2em;
+            color: var(--light-text);
+            margin-bottom: var(--spacing-unit);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-unit);
+            padding: var(--spacing-unit);
+            max-width: 1200px;
+            margin: var(--spacing-unit) auto;
+            flex-grow: 1;
+        }
+
+        section {
+            background-color: var(--mid-dark);
+            padding: var(--spacing-unit);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-summary {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.2em;
+            padding: var(--spacing-unit) 0;
+            color: var(--light-text);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        input[type="number"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #333;
+            border: 1px solid var(--border-color);
+            color: var(--light-text);
+            font-size: 1em;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        input[type="submit"] {
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00a0b8;
+        }
+
+        #tool-result {
+            margin-top: var(--spacing-unit);
+            padding: var(--spacing-unit);
+            background-color: #111;
+            border: 1px solid var(--border-color);
+            white-space: pre-wrap;
+            font-family: 'Consolas', monospace;
+            font-size: 1em;
+            color: #b0e0e6; /* Pale cyan */
+            min-height: 100px;
+            overflow-x: auto;
+        }
+
+        .recommendations ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recommendations li {
+            background-color: #333;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .seo-section {
+            grid-column: 1 / -1;
+            padding: var(--spacing-unit);
+            background-color: #111;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #aaa;
+            text-align: center;
+        }
+
+        .seo-section h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: none;
+            text-align: center;
+        }
+
+        .seo-section p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #555;
+            color: var(--light-text);
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .cta-button:hover {
+            background-color: #666;
+        }
+
+        footer {
+            background-color: var(--dark-bg);
+            color: #888;
+            text-align: center;
+            padding: var(--spacing-unit);
+            font-size: 0.8em;
+            border-top: 1px solid var(--border-color);
+            margin-top: var(--spacing-unit);
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://analyseur-de-coherence-acoustique-des-espaces-1.onrender.com">
+    <meta property="og:title" content="Analyseur de Cohérence Acoustique des Espaces">
+    <meta property="og:description" content="Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.">
+    <meta property="og:url" content="https://analyseur-de-coherence-acoustique-des-espaces-1.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Analyseur de Cohérence Acoustique des Espaces", "description": "Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.", "url": "https://analyseur-de-coherence-acoustique-des-espaces-1.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="analyseur-de-coherence-acoustique-des-espaces-1" data-runtime-mode="analysis_tool">
+    <header>
+        <h1>Analyseur de Cohérence Acoustique des Espaces</h1>
+        <p class="hero-summary">Évaluez la qualité acoustique de vos pièces (bureaux, studios, salles de concert) et obtenez des recommandations pour optimiser le son.</p>
+    </header>
+
+    <main>
+        <section style="grid-column: span 2;">
+            <h2>Votre Analyse Acoustique Personnalisée</h2>
+            <form id="tool-form">
+                <label for="longueur">Longueur de la pièce (m) :</label>
+                <input type="number" id="longueur" name="longueur" min="1" step="0.1" required value="5">
+
+                <label for="largeur">Largeur de la pièce (m) :</label>
+                <input type="number" id="largeur" name="largeur" min="1" step="0.1" required value="4">
+
+                <label for="hauteur">Hauteur de la pièce (m) :</label>
+                <input type="number" id="hauteur" name="hauteur" min="1" step="0.1" required value="2.5">
+
+                <label for="type_piece">Type de pièce :</label>
+                <select id="type_piece" name="type_piece">
+                    <option value="bureau">Bureau</option>
+                    <option value="studio">Studio d'enregistrement</option>
+                    <option value="salle_concert">Salle de concert</option>
+                    <option value="salon">Salon / Pièce de vie</option>
+                    <option value="salle_reunion">Salle de réunion</option>
+                </select>
+
+                <label for="materiaux_sol">Matériau du sol :</label>
+                <select id="materiaux_sol" name="materiaux_sol">
+                    <option value="beton">Béton/Carrelage</option>
+                    <option value="bois">Parquet bois</option>
+                    <option value="moquette">Moquette épaisse</option>
+                </select>
+
+                <label for="materiaux_murs">Matériaux des murs (majoritaire) :</label>
+                <select id="materiaux_murs" name="materiaux_murs">
+                    <option value="platre">Plâtre peint</option>
+                    <option value="beton">Béton brut</option>
+                    <option value="brique">Brique</option>
+                    <option value="panneaux_acoustiques">Panneaux acoustiques</option>
+                </select>
+
+                <input type="submit" id="tool-submit" value="Analyser la pièce">
+            </form>
+        </section>
+
+        <section style="grid-column: span 2;">
+            <h2>Résultat de l'Analyse Acoustique</h2>
+            <div id="tool-result">
+                Les résultats de votre analyse apparaîtront ici après avoir soumis le formulaire.
+            </div>
+            <div class="recommendations">
+                <h3>Nos Premières Recommandations</h3>
+                <ul id="recommendation-list">
+                    <li>Utilisez des tapis épais pour absorber le son.</li>
+                    <li>Ajoutez des rideaux lourds aux fenêtres.</li>
+                    <li>Considérez l'intégration de bibliothèques remplies de livres.</li>
+                </ul>
+                <a href="#" class="cta-button" data-affiliate-slot="further-advice">Obtenir des conseils avancés</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Comprendre l'Acoustique</h2>
+            <p>L'acoustique d'une pièce est cruciale pour le confort et l'efficacité sonore. Des facteurs comme le temps de réverbération (RT60), l'absorption et la diffusion du son jouent un rôle majeur.</p>
+            <p>Un environnement sonore mal géré peut entraîner de la fatigue, un manque de clarté dans la parole ou la musique, et même des problèmes de santé.</p>
+            <a href="#" class="cta-button" data-affiliate-slot="learn-more-acoustics">Approfondir le sujet</a>
+        </section>
+
+        <section>
+            <h2>Pourquoi nous faire confiance ?</h2>
+            <p>Notre outil est basé sur des modèles physiques simplifiés, mais efficaces, pour estimer les paramètres acoustiques clés. Développé par des experts en acoustique et ingénierie sonore, il offre une première approche fiable pour vos projets.</p>
+            <p>Des architectes, acousticiens et passionnés l'utilisent pour poser les bases d'un espace sonore optimal.</p>
+        </section>
+    </main>
+
+    <section class="seo-section">
+        <h2>Optimiser le Confort Sonore de votre Espace : Guide Complet</h2>
+        <p>Améliorer l'acoustique d'une pièce est essentiel pour le bien-être et la productivité. Que vous cherchiez à réduire la réverbération dans un bureau, à obtenir un son clair dans un studio d'enregistrement, ou à optimiser l'ambiance sonore d'une salle de concert, comprendre les bases de l'acoustique est la première étape.</p>
+        <p>Notre <span style="color:var(--accent-color);">outil d'analyse acoustique en ligne</span> vous permet d'évaluer rapidement le temps de réverbération (RT60) de vos espaces. Le RT60 est un indicateur clé de la qualité acoustique, mesurant le temps nécessaire à une onde sonore pour décroître de 60 dB. Un RT60 trop long peut rendre une pièce "bruyante" ou "réverbérante", tandis qu'un RT60 trop court peut la rendre "sèche".</p>
+        <p>Nous vous aidons à identifier les matériaux absorbants et diffusants les plus adaptés : panneaux acoustiques, rideaux, tapis, mobilier. Obtenez des recommandations concrètes pour le <span style="color:var(--accent-color);">traitement acoustique d'un salon</span>, l'isolation sonore d'une chambre, ou la correction acoustique d'une salle de réunion. Que ce soit pour une installation professionnelle ou un aménagement domestique, optimisez votre environnement sonore dès aujourd'hui.</p>
+    </section>
+
+    <footer>
+        © 2024 Analyseur de Cohérence Acoustique. Tous droits réservés.
+    </footer>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const longueur = parseFloat(document.getElementById('longueur').value);
+            const largeur = parseFloat(document.getElementById('largeur').value);
+            const hauteur = parseFloat(document.getElementById('hauteur').value);
+            const typePiece = document.getElementById('type_piece').value;
+            const materiauxSol = document.getElementById('materiaux_sol').value;
+            const materiauxMurs = document.getElementById('materiaux_murs').value;
+
+            const volume = longueur * largeur * hauteur;
+            const surfaceMurs = 2 * (longueur * hauteur + largeur * hauteur);
+            const surfaceSolPlafond = 2 * (longueur * largeur);
+            const surfaceTotale = surfaceMurs + surfaceSolPlafond;
+
+            let coeffAbsorptionMoyen = 0;
+            let rt60Ideal = 0;
+
+            // Coefficients d'absorption moyens (approximatifs, à 500Hz)
+            const absorptionCoeffs = {
+                // Sol
+                beton_sol: 0.02,
+                bois_sol: 0.1,
+                moquette_sol: 0.4,
+                // Murs
+                platre_mur: 0.05,
+                beton_mur: 0.02,
+                brique_mur: 0.03,
+                panneaux_acoustiques_mur: 0.7,
+                // Plafond (on suppose plâtre pour simplicité si pas de choix spécifique)
+                platre_plafond: 0.05,
+            };
+
+            // Coeffs d'absorption en fonction des matériaux
+            let absorptionSol = absorptionCoeffs[`${materiauxSol}_sol`];
+            let absorptionMurs = absorptionCoeffs[`${materiauxMurs}_mur`];
+            let absorptionPlafond = absorptionCoeffs.platre_plafond; // Simplification
+
+            // Surface d'absorption équivalente (A) en m² Sabine
+            const A = (longueur * largeur * absorptionSol) +
+                      (longueur * largeur * absorptionPlafond) +
+                      (2 * longueur * hauteur * absorptionMurs) +
+                      (2 * largeur * hauteur * absorptionMurs);
+
+            // Formule de Sabine pour le RT60 (approximative)
+            // RT60 = 0.161 * V / A
+            let rt60 = 0;
+            if (A > 0) {
+                rt60 = (0.161 * volume) / A;
+            } else {
+                rt60 = Infinity; // Cas d'une pièce anéchoïque ou surface d'absorption nulle, très improbable.
+            }
+
+            // RT60 idéal selon le type de pièce (valeurs indicatives en secondes)
+            switch (typePiece) {
+                case 'bureau': rt60Ideal = 0.5; break;
+                case 'studio': rt60Ideal = 0.3; break;
+                case 'salle_concert': rt60Ideal = 1.5; break; // Grande salle, ça varie énormément
+                case 'salon': rt60Ideal = 0.6; break;
+                case 'salle_reunion': rt60Ideal = 0.7; break;
+                default: rt60Ideal = 0.6;
+            }
+
+            let diagnostic = "";
+            let recommendations = [];
+
+            if (rt60 < rt60Ideal * 0.8) {
+                diagnostic = "La pièce est probablement trop 'sèche' ou 'mate'. Le son peut sembler étouffé, et l'ambiance peu vivante.";
+                recommendations.push("Ajoutez des surfaces réfléchissantes : cadres avec vitre, miroirs.",
+                                     "Utilisez du mobilier plus dur (bois laqué, métal).",
+                                     "Réduisez la quantité de matériaux absorbants si possible.");
+            } else if (rt60 > rt60Ideal * 1.2) {
+                diagnostic = "La pièce est probablement trop 'réverbérante'. Le son peut être confus, et la parole difficile à comprendre.";
+                recommendations.push("Intégrez des panneaux acoustiques absorbants sur les murs ou le plafond.",
+                                     "Ajoutez des tapis épais et des rideaux lourds.",
+                                     "Utilisez des meubles rembourrés (canapés, fauteuils).",
+                                     "Placez des diffuseurs acoustiques pour disperser le son si l'espace le permet.");
+            } else {
+                diagnostic = "L'acoustique de la pièce semble équilibrée pour son usage prévu.";
+                recommendations.push("Maintenez l'équilibre actuel. Considérez l'ajout de quelques éléments diffusants pour une meilleure spatialisation du son si pertinent.");
+            }
+
+            const resultDiv = document.getElementById('tool-result');
+            resultDiv.innerHTML = `
+                <h3>Résultats pour votre espace</h3>
+                <p><strong>Dimensions :</strong> ${longueur}m x ${largeur}m x ${hauteur}m</p>
+                <p><strong>Volume de la pièce :</strong> ${volume.toFixed(2)} m³</p>
+                <p><strong>RT60 estimé :</strong> ${rt60.toFixed(2)} secondes</p>
+                <p><strong>RT60 idéal pour un(e) ${typePiece} :</strong> ${rt60Ideal.toFixed(2)} secondes</p>
+                <p><strong>Diagnostic :</strong> ${diagnostic}</p>
+            `;
+
+            const recommendationList = document.getElementById('recommendation-list');
+            recommendationList.innerHTML = '';
+            recommendations.forEach(rec => {
+                const li = document.createElement('li');
+                li.textContent = rec;
+                recommendationList.appendChild(li);
+            });
+        });
+
+        // Initial analysis on page load with default values
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('tool-submit').click();
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.setAttribute("rel", "nofollow sponsored noopener noreferrer");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank", "noopener");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    if (tag === "select") {
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      field.value = sampleNumber(field);
+      return;
+    }
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
