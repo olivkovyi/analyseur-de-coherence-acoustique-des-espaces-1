@@ -37,7 +37,7 @@
     "status": "published",
     "repo_name": "analyseur-de-coherence-acoustique-des-espaces-1",
     "repo_url": "https://github.com/olivkovyi/analyseur-de-coherence-acoustique-des-espaces-1",
-    "updated_at": 1778154825
+    "updated_at": 1778528390
   },
   "deployment": {
     "status": "ready",
@@ -45,16 +45,14 @@
     "service_id": "srv-d7e2sf77f7vs73ebfvag",
     "project_name": "analyseur-de-coherence-acoustique-des-espaces-1",
     "requested_project_name": null,
-    "deployment_id": "dep-d7u7rd1po60c73e7lke0",
+    "deployment_id": "dep-d8131vmgvqtc73e1rhe0",
     "deployment_url": "https://analyseur-de-coherence-acoustique-des.onrender.com",
     "public_url": "https://analyseur-de-coherence-acoustique-des.onrender.com",
     "expected_public_url": "https://analyseur-de-coherence-acoustique-des.onrender.com",
     "dashboard_url": "https://dashboard.render.com/static/srv-d7e2sf77f7vs73ebfvag",
     "ready_state": "live",
     "target": "production",
-    "updated_at": 1778154838,
-    "requested_public_url": "https://analyseur-de-coherence-acoustique-des.onrender.com",
-    "url_source": "alias"
+    "updated_at": 1778528423
   },
   "qa": {
     "status": "pass",
@@ -265,5 +263,7 @@
     "opportunity_label": "Warming up",
     "opportunity_detail": "99 ref domains · shared-host: DR/AR смотри осторожно."
   },
-  "requested_url": "https://analyseur-de-coherence-acoustique-des.onrender.com"
+  "requested_url": "https://analyseur-de-coherence-acoustique-des.onrender.com",
+  "updated": "2026-05-11T19:40:23.326674+00:00",
+  "open_links_republished_at": "2026-05-11T19:40:23.326694+00:00"
 }
